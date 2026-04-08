@@ -4,7 +4,7 @@
 
 ## Features
 
-- Scrapes job postings from **LinkedIn**, **Indeed**, **Glassdoor**, **Google**, **ZipRecruiter**, & other job boards concurrently
+- Scrapes job postings from **LinkedIn**, **Indeed**, **Glassdoor**, **Google**, **ZipRecruiter**, **Wanted**, & other job boards concurrently
 - Aggregates the job postings in a dataframe
 - Proxies support to bypass blocking
 
@@ -25,7 +25,7 @@ import csv
 from jobspy import scrape_jobs
 
 jobs = scrape_jobs(
-    site_name=["indeed", "linkedin", "zip_recruiter", "google"], # "glassdoor", "bayt", "naukri", "bdjobs"
+    site_name=["indeed", "linkedin", "zip_recruiter", "google", "wanted"], # "glassdoor", "bayt", "naukri", "bdjobs"
     search_term="software engineer",
     google_search_term="software engineer jobs near San Francisco, CA since yesterday",
     location="San Francisco, CA",
@@ -59,7 +59,7 @@ zip_recruiter Software Developer                 TEKsystems        Phoenix      
 ```plaintext
 Optional
 ├── site_name (list|str): 
-|    linkedin, zip_recruiter, indeed, glassdoor, google, bayt, bdjobs
+|    linkedin, zip_recruiter, indeed, glassdoor, google, bayt, bdjobs, wanted
 |    (default is all)
 │
 ├── search_term (str)
